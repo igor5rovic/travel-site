@@ -13,8 +13,10 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             loader: 'babel-loader',
-            exclude: [path.resolve(__dirname, "node_modules")],
-
+            query: {
+                presets: ['es2015'],
+            },
+            exclude: [path.resolve(__dirname, "node_modules")]
         }]
     }
     /*module: {
